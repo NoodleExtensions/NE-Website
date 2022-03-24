@@ -1,0 +1,43 @@
+
+
+.credit {
+    display: none;
+}
+
+.tool-tip {
+    display: inline-block;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #2f2f2f !important;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    height: 367px;
+    width: 100%;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-image {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .light-image {
+        display: none;
+    }
+}
