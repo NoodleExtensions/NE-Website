@@ -137,7 +137,7 @@ window.onload = async () => {
     console.log("Loaded PC");
 
     $("#pc_version").html(PC.tag_name.replace("noodleextensions-v", ""));
-    $("#pc_download_btn").attr("href", PC.assets[0].url);
+    $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
     $("#pc_link").attr("href", PC.html_url);
 
@@ -152,7 +152,7 @@ window.onload = async () => {
     console.log("Loaded Quest");
 
     $("#quest_version").html(Quest.tag_name.replace("v", ""));
-    $("#quest_download_btn").attr("href", Quest.assets[0].url);
+    $("#quest_download_btn").attr("href", Quest.assets[0].browser_download_url);
     $("#quest_title").html(Quest.name);
     $("#quest_link").attr("href", Quest.html_url);
 
