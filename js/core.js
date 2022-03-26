@@ -152,7 +152,7 @@ window.onload = async () => {
     console.log("Loaded Quest");
 
     $("#quest_version").html(Quest.tag_name.replace("v", ""));
-    $("#quest_download_btn").attr("href", Quest.assets[0].browser_download_url);
+    $("#quest_download_btn").attr("href", Quest.assets[1].browser_download_url);
     $("#quest_title").html(Quest.name);
     $("#quest_link").attr("href", Quest.html_url);
 
