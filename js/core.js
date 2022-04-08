@@ -140,6 +140,7 @@ window.onload = async () => {
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
     $("#pc_link").attr("href", PC.html_url);
+    $("#beatmods_link").attr("href", PC.html_url);
 
     $("#pcLoadingDoneToRemove").css("display", "initial");
     $("#pcLoadingIndicator").remove();
