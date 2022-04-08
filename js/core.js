@@ -138,9 +138,10 @@ window.onload = async () => {
     
     // BeatMods
     const bm_data = await (await fetch("https://beatmods.com/api/v1/mod")).json();
-    for(let i = 0; i < myArray.length; i++){ 
-        if (if i["name"] == "NoodleExtensions" && i["version"] == PC.tag_name.replace("noodleextensions-v", "") && i["status"] == "approved") {
-            greeting = "Good day";
+    for(let i = 0; i < bm_data.length; i++){ 
+        if (if i.name == "NoodleExtensions" && i.version == PC.tag_name.replace("noodleextensions-v", "") && i.status == "approved") {
+            baseurl = "https://beatmods.com"
+            file = i.downloads[0].url
             break;
         }
     } 
