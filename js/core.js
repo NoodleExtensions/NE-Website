@@ -136,7 +136,7 @@ window.onload = async () => {
     
     
     // BeatMods
-    const bm_data = await (await fetch("https://beatmods.com/api/v1/mod")).json();
+    const bm_data = await (await fetch("https://beatmods.com/api/v1/mod", {mode:'cors'})).json();
     for(let i = 0; i < bm_data.length; i++){ 
         if (i.name == "NoodleExtensions" && i.version == PC.tag_name.replace("noodleextensions-v", "") && i.status == "approved") {
             basebmurl = "https://beatmods.com"
