@@ -133,8 +133,6 @@ window.onload = async () => {
     pc_data.forEach(release => {
         release.assets.forEach(asset => totalDL += asset.download_count);
     });
-    const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
-    console.log("Loaded PC");
     
     
     // BeatMods
@@ -147,6 +145,8 @@ window.onload = async () => {
             break;
         }
     } 
+    const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
+    console.log("Loaded PC");
     
     $("#pc_version").html(PC.tag_name.replace("noodleextensions-v", ""));
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
