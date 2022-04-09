@@ -136,7 +136,7 @@ window.onload = async () => {
     
     
     // BeatMods
-    const bm_data = await (await fetch("/BeatMods/download.json")).json();
+    const bm_data = await (await fetch("/api/v1/BeatMods.json")).json();
     
     
     const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
