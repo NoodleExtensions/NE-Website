@@ -136,15 +136,9 @@ window.onload = async () => {
     
     
     // BeatMods
-    const bm_data = await (await fetch("https://beatmods.com/api/v1/mod", {mode:'cors'})).json();
-    for(let i = 0; i < bm_data.length; i++){ 
-        if (i.name == "NoodleExtensions" && i.version == PC.tag_name.replace("noodleextensions-v", "") && i.status == "approved") {
-            basebmurl = "https://beatmods.com"
-            filelocation = i.downloads[0].url
-            bmdownloadurl = (basebmurl + filelocation)
-            break;
-        }
-    } 
+    const bm_data = await (await fetch("BeatMods/download.json")).json();
+    
+    
     const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
     console.log("Loaded PC");
     
@@ -152,7 +146,7 @@ window.onload = async () => {
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
     $("#pc_link").attr("href", PC.html_url);
-    $("#beatmods_link").attr("href", bmdownloadurl);
+    $("#beatmods_link").attr("href", bm_data.download_url);
 
     $("#pcLoadingDoneToRemove").css("display", "initial");
     $("#pcLoadingIndicator").remove();
