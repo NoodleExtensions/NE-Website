@@ -163,6 +163,7 @@ window.onload = async () => {
     $("#quest_download_btn").attr("href", Quest.assets[1].browser_download_url);
     $("#quest_title").html(Quest.name);
     $("#quest_link").attr("href", Quest.html_url);
+    $("#questdesc").html(Quest.body);
 
     $("#questLoadingDoneToRemove").css("display", "initial")
     $("#questLoadingIndicator").remove();
