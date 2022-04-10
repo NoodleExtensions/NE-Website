@@ -146,7 +146,6 @@ window.onload = async () => {
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
     $("#pc_link").attr("href", PC.html_url);
-    $("#pcdesc").html(PC.body);
     $("#beatmods_link").attr("href", bm_data.download_url);
 
     $("#pcLoadingDoneToRemove").css("display", "initial");
@@ -163,7 +162,6 @@ window.onload = async () => {
     $("#quest_download_btn").attr("href", Quest.assets[1].browser_download_url);
     $("#quest_title").html(Quest.name);
     $("#quest_link").attr("href", Quest.html_url);
-    $("#questdesc").html(Quest.body);
 
     $("#questLoadingDoneToRemove").css("display", "initial")
     $("#questLoadingIndicator").remove();
