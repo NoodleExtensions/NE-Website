@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.hero-body-no-flex {
+    align-items: center;
+}
+
 .credit {
     display: none;
 }
