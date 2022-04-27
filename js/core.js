@@ -135,15 +135,17 @@ window.onload = async () => {
     });
     
     
-    // BeatMods
+    // other
     const bm_data = await (await fetch("/api/v1/BeatMods.json")).json();
+    const video_data = await (await fetch("https://video-api.noodleextensions.com/videos.json")).json();
     
     
     const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
     console.log("Loaded PC");
     
     
-    $("#frame1").attr("src", "a");
+    $("#frame1").attr("src", video_data.1);
+    $("#frame2").attr("src", video_data.2);
     $("#pc_version").html(PC.tag_name.replace("noodleextensions-v", ""));
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
