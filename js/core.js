@@ -144,8 +144,8 @@ window.onload = async () => {
     console.log("Loaded PC");
     
     
-    $("#frame1").attr("src", video_data.1);
-    $("#frame2").attr("src", video_data.2);
+    $("#frame1").attr("src", "https://www.youtube-nocookie.com/embed/K_Fb7EEL2eQ?controls=0");
+    $("#frame2").attr("src", "https://www.youtube-nocookie.com/embed/Ehb7w20qoRY?controls=0");
     $("#pc_version").html(PC.tag_name.replace("noodleextensions-v", ""));
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
