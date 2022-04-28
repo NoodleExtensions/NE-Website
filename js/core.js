@@ -152,7 +152,7 @@ window.onload = async () => {
     
     while(true) {
         if (vid2 == vid1) {
-            const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
+            const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min];
         } else {
             break;
         }
