@@ -143,9 +143,12 @@ window.onload = async () => {
     const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
     console.log("Loaded PC");
     
+    const vid1 = video_data[1]
+    const vid2 = video_data[2]
     
-    $("#frame1").attr("src", video_data[1]);
-    $("#frame2").attr("src", video_data[2]);
+    
+    $("#frame1").attr("src", vid1);
+    $("#frame2").attr("src", vid2);
     $("#pc_version").html(PC.tag_name.replace("noodleextensions-v", ""));
     $("#pc_download_btn").attr("href", PC.assets[0].browser_download_url);
     $("#pc_title").html(PC.name);
