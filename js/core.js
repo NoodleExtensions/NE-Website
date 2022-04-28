@@ -147,11 +147,11 @@ window.onload = async () => {
     
     max = video_data.amount
     min = 1
-    const vid1 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
-    const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
+    var vid1 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
+    var vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     
     if (vid2 == vid1) {
-        const vid2 = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0";
+        vid2 = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0";
     }
     
     $("#frame1").attr("src", vid1);
