@@ -150,12 +150,8 @@ window.onload = async () => {
     const vid1 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     
-    while(true) {
-        if (vid2 == vid1) {
-            const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min];
-        } else {
-            break;
-        }
+    if (vid2 == vid1) {
+        const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     }
     
     $("#frame1").attr("src", vid1);
