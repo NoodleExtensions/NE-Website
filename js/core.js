@@ -150,8 +150,13 @@ window.onload = async () => {
     var vid1 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     var vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     
-    if (vid2 == vid1) {
-        vid2 = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0";
+    while(true) {
+        if (vid2 == vid1) {
+            console.log("vid1 and vid2 are equal retrying")
+            vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
+        } else {
+            break;
+        }
     }
     
     $("#frame1").attr("src", vid1);
