@@ -151,7 +151,7 @@ window.onload = async () => {
     const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     
     if (vid2 == vid1) {
-        console.log("vid2 and vid1 are the same")
+        const vid2 = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0"
     }
     
     $("#frame1").attr("src", vid1);
