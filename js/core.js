@@ -143,8 +143,12 @@ window.onload = async () => {
     const PC = window.noodle.releases.PC = pc_data.filter(release => release["tag_name"].includes("noodle"))[0];
     console.log("Loaded PC");
     
-    const vid1 = video_data[1]
-    const vid2 = video_data[2]
+    
+    
+    max = video_data.amount
+    min = 1
+    const vid1 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
+    const vid2 = video_data[Math.floor(Math.random() * (max - min + 1)) + min]
     
     
     $("#frame1").attr("src", vid1);
